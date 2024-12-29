@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niharika Singh - Certified Gym Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(gym.jpg);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .menu-items {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .menu-items li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .menu-items li a:hover {
+            color: #ffc3a0;
+        }
+
+        .showcase-area {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url("https://example.com/niharika-singh-gym-background.jpg");
+            background-size: cover;
+        }
+
+        .showcase-area h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .showcase-area p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.7rem 2rem;
+            background: #ffafbd;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffc3a0;
+        }
+
+        #about {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: white;
+        }
+
+        #about h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        #about p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        #testimonials {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #f8f8f8;
+        }
+
+        #testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial {
+            margin: 1rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Niharika Singh</h1>
+        <ul class="menu-items">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <h1 class="main-title" id="home">Transform Your Life with Niharika Singh</h1>
+        <p>Certified Gym Trainer | Motivational Speaker | Fitness Enthusiast</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </section>
+
+    <section id="about">
+        <h2>About Niharika</h2>
+        <p>Niharika Singh is a certified gym trainer with over a decade of experience in transforming lives through fitness. Her mission is to inspire and guide individuals towards a healthier and more active lifestyle.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial">
+            <p>"Niharika's training sessions are both challenging and rewarding. I've never felt stronger!"</p>
+            <p>- Aviral Singh</p>
+        </div>
+        <div class="testimonial">
+            <p>"Her motivational approach kept me going even on tough days. Highly recommend!"</p>
+            <p>- Sneha Singh </p>
+        </div>
+        <div class="testimonial">
+            <p>"A true professional who tailors workouts to individual needs. My fitness has improved drastically."</p>
+            <p>- Rohit Kumar</p>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>Niharika Singh &copy; All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector(".navbar");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 100) {
+                    navbar.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                } else {
+                    navbar.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+                }
+            });
+
+            const buttons = document.querySelectorAll(".btn");
+            buttons.forEach((btn) => {
+                btn.addEventListener("mouseover", () => {
+                    btn.style.transform = "scale(1.1)";
+                    btn.style.transition = "transform 0.3s";
+                });
+                btn.addEventListener("mouseout", () => {
+                    btn.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
